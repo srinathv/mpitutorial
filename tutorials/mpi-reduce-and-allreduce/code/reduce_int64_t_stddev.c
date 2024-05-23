@@ -59,6 +59,8 @@ int main(int argc, char *argv[]) {
   int world_size;
   MPI_Comm_size(MPI_COMM_WORLD, &world_size);
 
+
+  for (int i = 0; i <= arg2; i++) { // repeated loops
   // Create a random array of elements on all processes.
   srand(time(NULL)*world_rank); // Seed the random number generator of processes uniquely
   int64_t *rand_nums = NULL;
@@ -102,5 +104,6 @@ int main(int argc, char *argv[]) {
   free(rand_nums);
 
   MPI_Barrier(MPI_COMM_WORLD);
+} // loop of i over argv2
   MPI_Finalize();
 }

@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
     }
 
 
-
+  for (int i = 0; i <= arg2; i++) { // repeated loops
   //int num_elements_per_proc = atoi(argv[1]);
   int num_elements_per_proc = arg1; 
 
@@ -102,5 +102,6 @@ int main(int argc, char *argv[]) {
   free(rand_nums);
 
   MPI_Barrier(MPI_COMM_WORLD);
+} // i over argv2
   MPI_Finalize();
 }
