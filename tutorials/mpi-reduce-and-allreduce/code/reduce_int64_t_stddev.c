@@ -12,6 +12,7 @@
 #include <mpi.h>
 #include <math.h>
 #include <assert.h>
+#include <time.h>
 
 // Creates an array of random numbers. 
 int64_t *create_rand_nums(int num_elements) {
