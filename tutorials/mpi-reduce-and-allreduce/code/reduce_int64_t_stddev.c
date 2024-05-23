@@ -14,6 +14,14 @@
 #include <assert.h>
 #include <time.h>
 
+
+
+// Default values
+#define DEFAULT_ARG1 1000
+#define DEFAULT_ARG2 1000
+
+
+
 // Creates an array of random numbers. 
 int64_t *create_rand_nums(int num_elements) {
   int64_t *rand_nums = (int64_t *)malloc(sizeof(int64_t) * num_elements);
@@ -25,11 +33,22 @@ int64_t *create_rand_nums(int num_elements) {
   return rand_nums;
 }
 
-int main(int argc, char** argv) {
-  if (argc != 2) {
-    fprintf(stderr, "Usage: avg num_elements_per_proc\n");
-    exit(1);
-  }
+int main(int argc, char *argv[]) {
+
+    int arg1 = DEFAULT_ARG1; // Initialize with default value
+    int arg2 = DEFAULT_ARG2; // Initialize with default value
+
+    // Check if the first argument is provided
+    if (argc > 1) {
+        arg1 = atoi(argv[1]);
+    }
+
+    // Check if the second argument is provided
+    if (argc > 2) {
+        arg2 = atoi(argv[2]);
+    }
+
+
 
   int num_elements_per_proc = atoi(argv[1]);
 
