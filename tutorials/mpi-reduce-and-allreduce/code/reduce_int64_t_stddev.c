@@ -13,13 +13,13 @@
 #include <math.h>
 #include <assert.h>
 
-// Creates an array of random numbers. Each number has a value from 0 - 1
+// Creates an array of random numbers. 
 int64_t *create_rand_nums(int num_elements) {
   int64_t *rand_nums = (int64_t *)malloc(sizeof(int64_t) * num_elements);
   assert(rand_nums != NULL);
   int i;
   for (i = 0; i < num_elements; i++) {
-    rand_nums[i] = (rand() / (int64_t)RAND_MAX);
+    rand_nums[i] = (rand() );
   }
   return rand_nums;
 }
