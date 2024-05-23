@@ -10,6 +10,6 @@ reduce_stddev: reduce_stddev.c
 	${MPICC} -o reduce_stddev reduce_stddev.c -lm
 
 reduce_int64_t_stddev: reduce_int64_t_stddev.c
-	${MPICC} -o reduce_stddev reduce_int64_t_stddev.c -lm
+	${MPICC} -o reduce_int64_t_stddev reduce_int64_t_stddev.c -lm
 clean:
 	rm -f ${EXECS}
